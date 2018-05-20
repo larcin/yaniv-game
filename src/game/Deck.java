@@ -1,13 +1,17 @@
-package card;
+package game;
 
-import java.util.ArrayList;
+import card.Card;
+import card.Rank;
+import card.Tile;
+
 import java.util.Collections;
+import java.util.Stack;
 
 public class Deck {
-    private final ArrayList<Card> content;
+    private final Stack<Card> content;
 
     public Deck() {
-        this.content = new ArrayList<>();
+        this.content = new Stack<>();
     }
 
     public final void fill() {
@@ -21,6 +25,10 @@ public class Deck {
     // TODO : Improve random shuffling
     public final void shuffle() {
         Collections.shuffle(this.content);
+    }
+
+    public Card draw() {
+        return this.content.pop();
     }
 
     @Override

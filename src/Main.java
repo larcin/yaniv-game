@@ -1,7 +1,4 @@
-import card.Card;
-import card.Deck;
-import card.Rank;
-import card.Tile;
+import game.Deck;
 
 public class Main {
 
